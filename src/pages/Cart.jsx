@@ -3,7 +3,7 @@ import CartItem from "../components/CartItem";
 import CheckoutModal from "../components/CheckoutModal";
 import CheckoutSidebar from "../components/Checkoutsidebar";
 import { useCartPage } from "../utils/useCartPage";
-import EmptyPage from "../components/EmptyPAge";
+import EmptyPage from "../components/EmptyPage";
 
 export default function Cart() {
   const {

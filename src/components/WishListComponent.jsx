@@ -3,7 +3,7 @@ import { fetchProduct } from "../api";
 import { Link } from "react-router-dom";
 import { useWishlist } from "../utils/cart";
 import HeartImage from "../assets/heart.png";
-import EmptyPage from "./EmptyPAge";
+import EmptyPage from "./EmptyPage";
 
 export default function WishlistComponent() {
   const { wishlist, toggleWishlist } = useWishlist();
