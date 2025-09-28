@@ -1,14 +1,21 @@
 import React, { useEffect, useState } from "react";
 import { fetchCategories } from "../api";
 
-export default function FilterSidebar({ selectedCategory, onCategoryChange, searchQuery, onSearchChange, sortValue, onSortChange }) {
+export default function FilterSidebar({
+  selectedCategory,
+  onCategoryChange,
+  searchQuery,
+  onSearchChange,
+  sortValue,
+  onSortChange,
+}) {
   const [categories, setCategories] = useState([]);
 
   useEffect(() => {
     const getCategories = async () => {
       try {
         const data = await fetchCategories();
-        setCategories(data.slice(0, 10)); // first 10 categories
+        setCategories(data.slice(0, 10));
       } catch (err) {
         console.error("Failed to fetch categories:", err);
       }
@@ -17,7 +24,7 @@ export default function FilterSidebar({ selectedCategory, onCategoryChange, sear
   }, []);
 
   return (
-    <div className="border p-4 rounded-lg bg-white shadow-md w-full lg:w-60 h-full">
+    <div className="border p-4 rounded-lg bg-white shadow-md w-full lg:w-60 max-h-screen lg:sticky lg:top-4 overflow-auto">
       <h3 className="font-bold mb-3 text-lg">Search</h3>
       <input
         type="text"
@@ -38,7 +45,6 @@ export default function FilterSidebar({ selectedCategory, onCategoryChange, sear
         <option value="new">Newest</option>
         <option value="rating_low">Rating Low → High</option>
         <option value="rating_high">Rating High → Low</option>
-
       </select>
 
       <h3 className="font-bold mb-3 text-lg">Categories</h3>
@@ -48,7 +54,9 @@ export default function FilterSidebar({ selectedCategory, onCategoryChange, sear
             key={category.slug}
             onClick={() => onCategoryChange(category.slug)}
             className={`text-left p-2 rounded ${
-              selectedCategory === category?.slug ? "bg-blue-500 text-white" : "hover:bg-gray-100"
+              selectedCategory === category.slug
+                ? "bg-blue-500 text-white"
+                : "hover:bg-gray-100"
             }`}
           >
             {category.name}
