@@ -1,12 +1,12 @@
 # Mini E-Commerce Frontend
 
-A simplified but real-world e-commerce frontend built using **React**, **Vite**, **Tailwind CSS**, and **Redux Toolkit**. This project demonstrates a fully responsive, component-driven architecture with common e-commerce functionalities like product listing, product detail, cart management, and filtering.
+A simplified but real-world e-commerce frontend built using **React**, **Vite**, **Tailwind CSS**. This project demonstrates a fully responsive, component-driven architecture with common e-commerce functionalities like product listing, product detail, cart management, and filtering.
 
 ---
 
 ## Demo
 
-Hosted on Vercel: [Your Vercel Link Here]
+Hosted on Vercel: [vercel link](https://mini-e-commerce-task.vercel.app/)
 
 ---
 
@@ -32,15 +32,10 @@ Hosted on Vercel: [Your Vercel Link Here]
 - Similar products carousel
 
 ### Cart Page
-- Product summary with quantity controls
 - Remove item from cart
 - Apply promo code (dummy logic)
 - Price breakdown (MRP, discount, tax, total)
 - Mobile sticky checkout bar
-
-### Checkout Modal (Optional)
-- Dummy form (Name, Email, Address, etc.)
-- On submit, shows success message
 
 ---
 
@@ -48,7 +43,6 @@ Hosted on Vercel: [Your Vercel Link Here]
 
 - **Frontend:** React.js + Vite  
 - **Styling:** Tailwind CSS (mobile-first responsive design)  
-- **State Management:** Redux Toolkit  
 - **Data Persistence:** LocalStorage for cart & wishlist  
 - **Deployment:** Vercel  
 
@@ -56,27 +50,25 @@ Hosted on Vercel: [Your Vercel Link Here]
 
 ## API Reference
 
-This project uses either **DummyJSON API** or local static JSON files:
-
-- Products: `/api/products`
-- Product Details: `/api/products/:id`
-- Cart: `/api/cart`
-- Categories: `/api/categories`
-- Promo Codes: `/api/promocodes`
-- Related Products: `/api/related-products`
 
 Sample API used: [https://dummyjson.com/products](https://dummyjson.com/products)
 
----
 
+## Installation and running the application in local
 
----
-
-## Installation
-
-1. Clone the repository:
-
-```bash
+# 1. Clone the repository
 git clone https://github.com/RajeshGeesala/Mini_E_Commerce_task.git
-cd mini-ecommerce-frontend
+cd Mini_E_Commerce_task
+
+# 2. Install dependencies
+npm install
+
+# 3. Start the development server
+npm run dev
+
+# 4. Open the application in your browser
+http://localhost:5173
+
+
+Open http://localhost:5173
 
